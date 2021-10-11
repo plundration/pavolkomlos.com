@@ -10,8 +10,8 @@
 	--fw-reg: 300;
 	--fw-bold: 900;
 	--clr-light: #fff;
-	--clr-dark: #303030;
-	--clr-accent: #16e0bd;
+	--clr-dark: #2c2c2c;
+	--clr-accent: #20e9c7;
 	--fs-h1: 3rem;
 	--fs-h2: 2.25rem;
 	--fs-h3: 1.25rem;
@@ -240,6 +240,53 @@ nav {
 		margin-left: 2em;
 	}
 }
+
+/* My work section */
+
+.works {
+	display:flex;
+}
+
+.work-image {
+	padding: 1em;
+	align-items: center;
+}
+
+.work-image img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.work-image:hover {
+	opacity: 0.5;
+	border-style: solid;
+	border-width: 1px; /* margin must be equal to -1 * this */
+	border-color: var(--clr-accent);
+	margin: -1px; /* to not make the object move because of border */
+}
+
+
+/* Competitions section */
+
+.competitions {
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
+}
+
+.section-title--competitions {
+	color: var(--clr-accent);
+}
+
+.competitions-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 0.8em;
+}
+
+.competition {
+	padding: .3em 1%;
+}
+
 
 /* Footer */
 
