@@ -5,16 +5,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <title>Pavol Komloš</title>
         <link rel="icon" href="/assets/img/favicon.png">
         <link rel="stylesheet" href="/css/style.css">
-        
+
         <!-- For different browsers -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+            crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
 
     </head>
 
@@ -26,9 +28,9 @@
                 <ul class="nav-list">
                     <img src="/assets/img/logo-transparent.png" alt="{ komloš }" class="logo">
                     <div>
-                        <li class="nav-item"><a class="nav-link" onClick="document.getElementById('aboutme').scrollIntoView();" >O mne</a></li>
-                        <li class="nav-item"><a class="nav-link" onClick="document.getElementById('whatido').scrollIntoView();" >Čo viem</a></li>
-                        <li class="nav-item"><a class="nav-link" onClick="document.getElementById('mywork').scrollIntoView();" >Moja práca</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutme">O mne</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#whatido">Čo viem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mywork">Moja práca</a></li>
                     </div>
                 </ul>
             </nav>
@@ -197,6 +199,20 @@
                 </li>
             </ul>
         </footer>
+
+
+        <!-- Smooth scrolling for a tags withing page -->
+        <script type="text/javascript">
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    console.log("lkmao");
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
 
     </body>
 
