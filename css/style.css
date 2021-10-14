@@ -254,6 +254,9 @@ header {
 	.area+.area {
 		margin-left: 2em;
 	}
+	.area {
+		width: calc(100%/3); /* todo , make all areas the same size*/
+	}
 }
 
 /* My work section */
