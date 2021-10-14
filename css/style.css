@@ -28,7 +28,6 @@
 	}
 }
 
-
 /* General styles */
 
 body {
@@ -101,50 +100,43 @@ h3 {
 	padding: 0.25em 0.5em;
 }
 
-
 /* Header */
 
 header {
-	width: 100%;
-	height: 10%;
 	background-color: #111;
-	position: relative;
-}
-
-nav {
-	padding: 0.5em 1em;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }
 
 .logo {
-	display: inline-block;
+	margin-left: 1em;
+	align-self: center;
 	width: 140px;
 }
 
 .nav-list {
+	padding: .3em;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-items {
 	padding: 1em 1em;
-	margin: 0 0;
+	padding-top: 0.7em;
 }
 
-.nav-list div {
-	float: right;
-}
-
-.nav-list li {
+.nav-item {
 	display: inline;
-	margin: 0 15px;
+	padding: 0 15px;
 }
 
-.nav-list li a {
+.nav-link {
 	text-decoration: none;
 	color: var(--clr-light);
-	padding: 5px 0;
+	padding: 4px 0;
 	position: relative;
 }
 
-.nav-list li a::after {
+.nav-link::after {
 	content: '';
 	background: var(--clr-accent);
 	width: 100%;
@@ -154,6 +146,21 @@ nav {
 	left: 0;
 }
 
+@media (max-width: 500px) {
+	.logo {
+		margin: 0;
+		padding-top: 0.8em;
+	}
+	.nav-list {
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.nav-items {
+		display: flex;
+		justify-content: center;
+	}
+}
 
 /* Intro section */
 
@@ -164,6 +171,11 @@ nav {
 
 .intro--img {
 	box-shadow: var(--bs);
+	/* TODO fixthis */
+	/* 
+	margin-left: auto; this centers
+	margin-right: auto; 
+	*/
 }
 
 .section-subtitle--intro {
@@ -247,7 +259,7 @@ nav {
 /* My work section */
 
 .works {
-	display:flex;
+	display: flex;
 }
 
 .work-image {
@@ -265,10 +277,11 @@ nav {
 	background-color: var(--clr-accent);
 	border-color: var(--clr-dark);
 	border-style: solid;
-	border-width: 1px; /* margin must be equal to -1 * this */
-	margin: -1px; /* to not make the object move because of border */
+	border-width: 1px;
+	/* margin must be equal to -1 * this */
+	margin: -1px;
+	/* to not make the object move because of border */
 }
-
 
 /* Competitions section */
 
@@ -290,7 +303,6 @@ nav {
 .competition {
 	padding: .3em 1%;
 }
-
 
 /* Footer */
 
