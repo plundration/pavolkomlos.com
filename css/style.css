@@ -1,6 +1,4 @@
-*, *::before, *::after {
-	box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 /* Custom properties */
 
@@ -8,6 +6,7 @@
 	--ff-primary: 'Source Sans Pro', sans-serif;
 	--ff-secondary: 'Source Code Pro', monospace;
 	--fw-reg: 300;
+    --fw-mid: 700;
 	--fw-bold: 900;
 	--clr-light: #fff;
 	--clr-dark: #2c2c2c;
@@ -44,17 +43,22 @@ img {
 	max-width: 100%;
 }
 
-a {
-	color: var(--clr-accent);
+a { 
+    color: var(--clr-accent); 
+    text-decoration: none;
+    font-weight: var(--fw-mid); 
 }
 
-b, strong {
-	font-weight: var(--fw-bold);
+a:hover { 
+    opacity: 0.75;
+    color: var(--clr-accent);
+    transition: 0.5s ease;
+    text-decoration: underline
 }
 
-section {
-	padding: 4em 2em;
-}
+
+b, strong { font-weight: var(--fw-bold); }
+section { padding: 4em 2em; }
 
 /* Typography */
 
@@ -63,17 +67,9 @@ h1, h2, h3 {
 	margin: 0;
 }
 
-h1 {
-	font-size: var(--fs-h1);
-}
-
-h2 {
-	font-size: var(--fs-h2);
-}
-
-h3 {
-	font-size: var(--fs-h3);
-}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
 
 .section-title {
 	margin-bottom: .25em;
@@ -134,6 +130,11 @@ header {
 	color: var(--clr-light);
 	padding: 4px 0;
 	position: relative;
+}
+
+.nav-link:hover {
+    color: var(--clr-light);
+    text-decoration: none;
 }
 
 .nav-link::after {
@@ -264,7 +265,7 @@ header {
 .works {
 	display: flex;        
 	flex-wrap: wrap;
-        justify-content: flex-start;   
+    justify-content: flex-start;   
 }
 
 .work-image {
@@ -272,21 +273,20 @@ header {
 	align-items: center;
 }
 
-.work-image img {
-	height: 225px;
-	object-fit: cover;
+.work-image:hover {
+	opacity: 0.4;
+	background-color: var(--clr-accent);
+	border: 1px solid var(--clr-dark);
+    border-radius: 10px;
+	/* margin must be equal to -1 * this */
+	/* to not make the object move because of border */
+	margin: -1px;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
 }
 
-
-.work-image:hover {
-	opacity: 0.5;
-	background-color: var(--clr-accent);
-	border-color: var(--clr-dark);
-	border-style: solid;
-	border-width: 1px;
-	/* margin must be equal to -1 * this */
-	margin: -1px;
-	/* to not make the object move because of border */
+.work-image img {
+	height: 230px;
+	object-fit: cover;
 }
 
 /* Competitions section */
@@ -309,6 +309,27 @@ header {
 .competition {
 	padding: .3em 1%;
 }
+
+/* Course section */
+
+
+
+.course-item {
+    padding: 0.8em
+}
+
+@media (min-width: 800px) {
+    .course-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 2000px;
+    }   
+
+    .course-item {
+        max-width: 50%;
+    }
+}
+
 
 /* Footer */
 
@@ -352,3 +373,4 @@ footer a {
 .social-list-link {
 	padding: .5em;
 }
+
