@@ -147,6 +147,12 @@ header {
 	left: 0;
 }
 
+.lang-redirect {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--clr-light);
+}
+
 @media (max-width: 500px) {
 	.logo {
 		margin: 0;

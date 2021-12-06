@@ -6,35 +6,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Pavol Komloš</title>
+        <title>Pavol Komlos - CV Page</title>
         <meta name="description" content="This is the website of Pavol Alexander Komloš. This page is still in development. It is still not fully translated.">
         <link rel="icon" href="/assets/img/favicon.png">
         <link rel="stylesheet" href="/css/style.css">
 
         <!-- For different browsers -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-            crossorigin="anonymous">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
 
+        <!-- Better from CDN (cached in browser!) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <style>
-            body {
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-            }
-
-            footer {
-                margin-top: auto;
-            }
-
-            h1 {
-                line-height: 1.5;
-            }
-
-        </style>
+        <!-- Smooth scrolling for 'a' tags withing page -->
+        <script type="text/javascript">
+            $(document).on('click', 'a[href^="#"]', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+            });
+        </script>
 
     </head>
 
@@ -43,25 +36,181 @@
 
         <header>
             <ul class="nav-list">
-                <img src="/assets/img/logo-transparent.png" class="logo">
+                <img src="/assets/img/logo.png" class="logo">
+                <div class="nav-items">
+                    <li class="nav-item"><a class="nav-link" href="#aboutme">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#whatido">What I know</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mywork">My work</a></li>
+                    <li class="nav-item"><a class="lang-redirect" href="/sk/index.html">SK</a></li>
+                </div>
             </ul>
         </header>
 
 
-        <section>
 
-            <h1>
-                English section <br>
-                This is still in development!
-            </h1>
+        <section class="aboutme" id="aboutme">
 
-            <br>
+            <h1 class="section-title section-title--aboutme">Who I am</h1>
 
-            <button onclick="window.location='../sk/index.html'">
-                Redirect to site
-            </button>
+            <p>
+                Graduate of ZŠ Krosnianska 4 in Košice. <br />
+                Student of Grammar School Poštová 9 in Košice, where I <br/>
+                am a member of the School Parliament and daily take part in administrative and group activities. <br />
+                After I successfully graduate from grammar school I aspire to study at a prestigious foreign University,<br/>
+                most probably in some field of chemistry or possibly even computer science.
+            </p>
 
         </section>
+
+
+        <!-- What i do -->
+        <section class="whatido" id="whatido">
+
+            <h1 class="section-title section-title--whatido">What I know</h1>
+            <div class="areas">
+                <div class="area">
+                    <h3>Science</h3>
+                    <p>
+                        I have a giant interest in the natural sciences, especially <b>chemistry</b>, biology, astronomy, and maths.
+                        Since a young age learning about science and practicing it has been my main hobby, that I put time into
+                        even outside of school, like in my own <b>chemistry/biology lab</b> at home or by 
+                        exploring the skies and deep space with my small dobsonian telescope. My favorite fields
+                        are the border disciplines of chemistry and biology (biophysics, biochemistry), evolutionary biology, and quantum physics.
+                        You can also read about my <a href=#competitions>successes in olympiads</a> and my <a href="#staz">internship</a> at the Institute of Geochemistry. 
+                    </p>
+                </div>
+
+                <div class="area">
+                    <h3>Programming</h3>
+                    <p>
+                        I am experienced in a multitude of programming languages:
+                        <br> <b>{ C, C++, C#, Python, GDScript, HTML+CSS+JS }</b> <br>
+                        and I can work with Excel. I worked on multiple 2D games in Godot engine and Unity, and I took part in
+                        multiple game jams. I created my own <b>game engine in C++</b> with Raylib.
+                        Together with a fellow friend I organised a programming competition called <a href="http://adam.harmansky.xyz/advent.html">Advent Programovania</a>.
+                        I have been using Linux on a daily basis for 2 years now <i>(Ubuntu and Garuda Linux)</i>. In the near future
+                        I would like to learn to work with databases. My favorite text editor is <b>NeoVim</b>.
+                    </p>
+                </div>
+
+                <div class="area">
+                    <h3>English</h3>
+                    <p>
+                        I am very proud of my english skill. I use the english language on the daily, sometimes more than my own language:
+                        In the consumption of massmedia (videos, news, scientific articles, music), in conversations with foreigners
+                        on the internet, in programming and learning on the internet.
+                        I mainly have my parents to thank for this, since they were the ones to push me from a young age to learn english, mainly
+                        in the form of english cartoons. I also obtained the <a href="https://www.efset.org/cert/xy8y7g">EFSET C2 certificate</a>.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- My work -->
+        <section class="mywork" id="mywork">
+
+            <h1 class="section-title section-title--work">My work</h1>
+
+            <div class="works">
+                <a href="https://quasar-game-studios.itch.io/careden" class="work-image">
+                    <img src="https://img.itch.zone/aW1hZ2UvNzM5NjkxLzQxMTk4MTkucG5n/347x500/Tew2ov.png" alt="careden">
+                </a>
+
+                <a href="https://plundration.itch.io/horizon" class="work-image">
+                    <img src="https://img.itch.zone/aW1nLzQxODg0NDcucG5n/315x250%23c/KYNTTE.png" alt="horizon">
+                </a>
+
+                <a href="https://github.com/plundration/PixelArtEngine" class="work-image">
+                    <img src="/assets/img/pixelartengine.png" alt="pixel-art engine">
+                </a>
+
+                <a href="http://adam.harmansky.xyz/advent.html" class="work-image">
+                    <img src="/assets/img/advent.png" alt="advent of programming">
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- Competitions -->
+        <section class="competitions" id="competitions">
+            <h1 class="section-title section-title--competitions">Competitions</h1>
+            <div class="competitions-container">
+                
+                <div class="competition">
+                    <h2 class="section-subtitle">Olympiads</h2>
+                    <p class="competitions-paragraph"></p>
+                    <ul>
+                        <li> Chemistry olympiad: 5th place State round C Cat. 2020/21 </li>
+                        <li> Chemistry olympiad: 8th place National round D Cat. 2019/20 </li>
+                        <li> Physics olympiad: 5th place State round C Cat. 2020/21 </li>
+                        <li> Biology olympiad: 1st place Regional round C Cat. 2019/20 </li>
+                        <li> Mathematics olympiad: 8th place Regional round Z9 Cat. 2019/20 </li>
+                        <li> English language olympiad: 2nd place 2019/20 </li>
+                        <!-- Todo olympiády 2021/22 -->
+                    </ul>
+                </div>
+
+                <div class="competition">
+                    <h2 class="section-subtitle">Debate Competition</h2>
+                    <p class="competitions-paragraph"></p>
+                    <ul>
+                        <li> 2nd place National round 2018/19 </li>
+                        <li> 1st place 1st State round 2017/18 </li>
+                        <li> 2nd place 2nd State round 2017/18 </li>
+                        <li> 4th place 2nd State round 2018/19 </li>
+                    </ul>
+                </div>
+
+                <div class="competition">
+                    <h2 class="section-subtitle">Other competitions</h2>
+                    <p class="competitions-paragraph"></p>
+                    <ul>
+                        <li> Programming: PALMA junior: 2nd place National round GURU 2020/21 </li>
+                        <li> Physics: Fyzikláni: 12. place z 215 International round 2021/22</li>
+                        <li> Physics: Turnaj Mladých Fyzikov: Úspešný riešiteľ National round 2020/21 </li>
+                        <li> Maths: Junior matematický náboj: 1. place State, 45. place International from 900 teams 2019/20 </li>
+                        <!-- Todo Create and control -->
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="courses" id="courses">
+            <h1 class="section-title section-title--courses">Courses and internships</h1>
+            
+            <div class="course-container">
+                <div class="course-item">
+                    <h2 class="section-subtitle section-subtitle--courses" id=staz>Internship at the Institute of Geochemistry</h2>
+                    <p>
+                        In august of 2021 I took part in a <a href="/assets/staz.pdf">3 week internship</a> at 
+                        the Institute of Geochemistry of the Slovak Academy of Sciences in Košice as the youngest intern/employee yet.
+                        I was taught how to operate a chemical mill and prepare samples for study. I learned about capilary porometry,
+                        UV catalysis, and cleaning of waste watters useing recycled biological materials.
+                    </p>
+                </div>
+
+                <div class="course-item">
+                    <h2 class="section-subtitle section-subtitle--courses"></h2>
+                    <p>
+                        <!-- todo CSIRT -->
+                    </p>
+                </div>
+
+                <div class="course-item">
+                    <h2 class="section-subtitle section-subtitle--courses"></h2>
+                    <p>
+                        <!-- todo advent of code and hack kosice -->
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
 
         <footer>
             <a href="mailto:pavol.a.komlos@gmail.com" class="footer-link"> pavol.a.komlos@gmail.com </a>
