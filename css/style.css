@@ -280,7 +280,7 @@ header {
 }
 
 .work-image:hover {
-	opacity: 0.4;
+	opacity: 0.8;
 	background-color: var(--clr-accent);
 	border: 1px solid var(--clr-dark);
     border-radius: 10px;
