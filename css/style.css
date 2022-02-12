@@ -277,6 +277,8 @@ header {
 .work-image {
 	padding: 1em;
 	align-items: center;
+	border: 1px solid #00000000;
+	transition: 0.5s ease;
 }
 
 .work-image:hover {
@@ -284,10 +286,6 @@ header {
 	background-color: var(--clr-accent);
 	border: 1px solid var(--clr-dark);
     border-radius: 10px;
-	/* margin must be equal to -1 * this */
-	/* to not make the object move because of border */
-	margin: -1px;
-    transition: background-color 0.5s ease, opacity 0.5s ease;
 }
 
 .work-image img {
