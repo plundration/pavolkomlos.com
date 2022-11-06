@@ -1,19 +1,73 @@
-<a style="display: none" href="https://pavolkomlos.me/en/index.html"></a>
-<a style="display: none" href="https://pavolkomlos.me/sk/index.html"></a>
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<script>
-	fetch('https://ipapi.co/country/')
-		.then(response => {
-			return response.text();
-		})
-		.then(country => {
-			if (country == 'SK') {
-				window.location = "/sk/index.html";
-			} else {
-				window.location = "/en/index.html";
-			}
-		})
-		.catch(function (error) {
-			window.location = "/sk/index.html";
-		});
-</script>
+        <title>Pavol Komloš</title>
+        <meta name="description" content="Pavol Alexander Komloš. Fullstack web developer, študent." />
+        <link rel="icon" href="/assets/img/favicon.svg" />
+        <link rel="stylesheet" href="/css/styles.css" />
+
+        <!-- For different browsers -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,700,900|Chakra+Petch:400,700,900|IBM+Plex+Mono:400,900&display=swap" />
+        <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+
+        <!-- Better from CDN (cached in browser!) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+        <!-- Smooth scrolling for 'a' tags withing page -->
+        <script type="text/javascript">
+            $(document).on("click", 'a[href^="#"]', function (e) {
+                e.preventDefault();
+                $("html, body").animate({ scrollTop: $($.attr(this, "href")).offset().top }, 500);
+            });
+        </script>
+
+        <script src="tagcloud.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="assets/img/plunder.svg" />
+        </header>
+
+        <div class="full-page" id="intro">
+            <div id="intro-overlay">
+                <div id="intro-text">
+                    <div class="smaller icon-display" style="padding: 0.5em">
+                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <i class="fa-solid fa-atom"></i>
+                        <i class="fa-solid fa-calculator"></i>
+                        <i class="fa-solid fa-bacterium"></i>
+                    </div>
+
+                    <p class="smaller pixel" style="padding: 0.5em">pavol alexander komloš</p>
+
+                    <p>
+                        <i class="fa-solid fa-fire" style="font-size: 0.8em"> </i> <i>fullstack web developer,</i>
+                        študent gymnázia poštová 9, ambiciózny a úspešný
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            <div class="full-page" id="programming">
+                <span class="content">
+                    <style>
+                        .tagcloud {
+                            font-size: 1.5em;
+                            font-family: 'IBM Plex Mono', monospace;
+                        }
+                    </style>
+                </span>
+            </div>
+
+            <footer></footer> 
+        -->
+    </body>
+</html>

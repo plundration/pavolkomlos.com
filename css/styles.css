@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+
+:root {
+    --ff-primary: "Questrial", sans-serif;
+    --ff-accent: "Chakra Petch", monospace;
+    --ff-mono: "IBM Plex Mono", monospace;
+    --ff-pixel: "TheGoodMonolith", monospace;
+    --fw-reg: 400;
+    --fw-mid: 700;
+    --fw-bold: 900;
+
+    --clr-dark: #080e21;
+    --clr-dar-sec: #2b3964;
+    --clr-light: #f1f3f9;
+    --clr-accent: #3bdef7;
+
+    --fs-h1: 4rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --bs: 0.25 em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    font-weight: var(--fw-mid);
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    transition: 0.2s ease;
+    opacity: 0.75;
+    transform: translateY(-0.05em);
+}
+
+b,
+strong {
+    font-weight: var(--fw-bold);
+}
+section {
+    padding: 4em 2em;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-accent);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom styles */
+
+.full-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+.smaller {
+    font-size: 0.65em;
+}
+
+.monospace {
+    font-family: var(--ff-mono);
+}
+
+.pixel {
+    font-family: var(--ff-pixel);
+    font-size-adjust: 0.7;
+}
+
+.icon-display {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* */
+
+header {
+    position: absolute;
+    z-index: 1000;
+
+    width: 100vw;
+    height: 7vh;
+    padding: 1.5vh;
+
+    background-color: #080e21af;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 100%;
+    width: auto;
+}
+
+#intro {
+    background-image: url("../assets/img/earth.jpg");
+    background-size: cover;
+    
+    --width: 2px;
+    --height: 3vh;
+}
+
+#intro::before {
+    content: "SCROLL";
+    font-size: calc(var(--height) * 0.75);
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 0.5 * var(--width) + 0.5 * var(--height));
+    color: var(--clr-light);
+}
+
+#intro::after {
+    content: "";
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 0.5 * var(--width));
+    background-color: var(--clr-light);
+}
+
+#intro-overlay {
+    background-color: rgba(0, 8, 23, 0.705);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-text {
+    font-size: 1.6em;
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    text-align: center;
+
+    max-width: 560px;
+    margin: 5vw;
+}
+
+/* Footer */
+
+footer {
+    height: 35vh;
+}
