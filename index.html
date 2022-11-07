@@ -37,8 +37,8 @@
         <div class="full-page" id="intro">
             <div id="intro-overlay">
                 <img id="intro-logo" src="assets/img/plunder.svg" />
-                <div id="intro-text">
-                    <div class="smaller icon-display" style="padding: 0.5em">
+                <div id="intro-text" class="uppercase">
+                    <div class="smaller accent icon-display" style="padding: 0.5em">
                         <i class="fa-solid fa-code"></i>
                         <i class="fa-solid fa-flask-vial"></i>
                         <i class="fa-solid fa-atom"></i>
@@ -60,24 +60,20 @@
         <!-- Programming -->
 
         <div id="programming">
-            <div id="programming-container">
-                <div id="programming-text" class="hover-enlarge">
-                    <h2 style="padding-bottom: 0.5em; color: var(--clr-accent)"><i class="fa-solid fa-code"></i></h2>
-                    <div>Mám skusenosti s budovaním fullstack webstránok, 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM.</div>
+            <div style="background-color: rgba(0, 10, 25, 0.7)">
+                <div id="programming-container">
+                    <div id="programming-text" class="hover-up">
+                        <h2 style="padding-bottom: 0.5em; color: var(--clr-accent)"><i class="fa-solid fa-code"></i></h2>
+                        <div>Mám skusenosti s budovaním fullstack webstránok, 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM.</div>
+                    </div>
+                    <div class="big-cloud"></div>
+                    <div class="small-cloud"></div>
                 </div>
-                <span class="content">
-                    <style>
-                        .tagcloud {
-                            margin: 1em;
-                            font-size: 1.5em;
-                            font-family: "IBM Plex Mono", monospace;
-                        }
-                    </style>
-                </span>
+
+                <!-- Github link -->
+                <div></div>
             </div>
         </div>
-
-        <!-- Competitions and certificates -->
 
         <!-- Bookstore -->
 
@@ -86,12 +82,29 @@
                 Horizon    
                 Pixel art engine 
         -->
-        
+
         <!-- Other projects -->
 
-        <footer>
-            <!-- Contacts -->
-            <!-- Funny stuff -->
+        <!-- Competitions and certificates -->
+
+        <footer class="full-page">
+            <div class="full-page" style="background-color: rgba(0, 10, 25, 0.8)" id="footer-container">
+                <div class="pixel smaller" id="footer-text"> 
+                    COPYRIGHT © 2022 PAVOL ALEXANDER KOMLOŠ 
+                </div>
+
+                <div id="footer-contacts" class="monospace">
+                    <span class="pixel">PAVOL <br/> ALEXANDER <br/> KOMLOŠ </span>
+                    <img src="assets/img/plunder.svg" />
+                    <a href="https://github.com/plundration">GITHUB</a>
+                    <a href="mailto:pavol.a.komlos@gmail.com">EMAIL</a>
+                    <a href="https://plundration.github.io/">NOTES</a>
+                </div>
+
+                <div id="footer-text">
+                    <a href="#intro" class="pixel"> <i class="fa-solid fa-arrow-up-long" style="writing-mode: horizontal-tb"></i> BACK TO TOP </a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
