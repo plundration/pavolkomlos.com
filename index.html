@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="darkreader-lock" />
 
         <title>Pavol Komloš</title>
         <meta name="description" content="Pavol Alexander Komloš. Fullstack web developer, študent." />
         <link rel="icon" href="/assets/img/favicon.svg" />
+
         <link rel="stylesheet" href="/css/styles.css" />
 
         <!-- For different browsers -->
@@ -30,12 +32,11 @@
     </head>
 
     <body>
-        <header>
-            <img src="assets/img/plunder.svg" />
-        </header>
+        <!-- Intro-->
 
         <div class="full-page" id="intro">
             <div id="intro-overlay">
+                <img id="intro-logo" src="assets/img/plunder.svg" />
                 <div id="intro-text">
                     <div class="smaller icon-display" style="padding: 0.5em">
                         <i class="fa-solid fa-code"></i>
@@ -52,22 +53,45 @@
                         študent gymnázia poštová 9, ambiciózny a úspešný
                     </p>
                 </div>
+                <div class="page-bottom-scroll">SCROLL</div>
             </div>
         </div>
 
-        <!--
-            <div class="full-page" id="programming">
+        <!-- Programming -->
+
+        <div id="programming">
+            <div id="programming-container">
+                <div id="programming-text" class="hover-enlarge">
+                    <h2 style="padding-bottom: 0.5em; color: var(--clr-accent)"><i class="fa-solid fa-code"></i></h2>
+                    <div>Mám skusenosti s budovaním fullstack webstránok, 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM.</div>
+                </div>
                 <span class="content">
                     <style>
                         .tagcloud {
+                            margin: 1em;
                             font-size: 1.5em;
-                            font-family: 'IBM Plex Mono', monospace;
+                            font-family: "IBM Plex Mono", monospace;
                         }
                     </style>
                 </span>
             </div>
+        </div>
 
-            <footer></footer> 
+        <!-- Competitions and certificates -->
+
+        <!-- Bookstore -->
+
+        <!-- 
+            Games 
+                Horizon    
+                Pixel art engine 
         -->
+        
+        <!-- Other projects -->
+
+        <footer>
+            <!-- Contacts -->
+            <!-- Funny stuff -->
+        </footer>
     </body>
 </html>

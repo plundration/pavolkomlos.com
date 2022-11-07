@@ -15,16 +15,18 @@
     --fw-mid: 700;
     --fw-bold: 900;
 
-    --clr-dark: #080e21;
-    --clr-dar-sec: #2b3964;
-    --clr-light: #f1f3f9;
-    --clr-accent: #3bdef7;
+    --clr-dark: #0B111D;
+    --clr-dark-sec: #111A2C;
+    --clr-dark-tert: #1D2B49;
+    --clr-light: #F4EDEA;
+    --clr-light-sec: #C5D8D1;
+    --clr-accent: #06BCC1;
 
     --fs-h1: 4rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-    --bs: 0.25 em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+	--bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
 @media (min-width: 800px) {
@@ -125,27 +127,29 @@ p {
     justify-content: space-around;
 }
 
-/* */
+.hover-enlarge { transition: transform 0.2s ease; }
+.hover-enlarge:hover { transform: scale(1.03); }
 
-header {
-    position: absolute;
-    z-index: 1000;
-
-    width: 100vw;
-    height: 7vh;
-    padding: 1.5vh;
-
-    background-color: #080e21af;
-
+.page-bottom-scroll {
+    --padding: 0.5em;
+    font-size: 1.3em;
+    transform: translate(calc(50% + var(--padding)));
+    margin-left: var(--padding);
+    left: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-header img {
+.page-bottom-scroll::before {
+    content: '';
+    position: relative;
+    left: calc(-1 * var(--padding));
+    display: inline-block;
     height: 100%;
-    width: auto;
+    width: 2px;
+    background-color: var(--clr-light);
 }
+
+/* */
 
 #intro {
     background-image: url("../assets/img/earth.jpg");
@@ -155,33 +159,22 @@ header img {
     --height: 3vh;
 }
 
-#intro::before {
-    content: "SCROLL";
-    font-size: calc(var(--height) * 0.75);
-    position: absolute;
-    bottom: 0;
-    left: calc(50vw - 0.5 * var(--width) + 0.5 * var(--height));
-    color: var(--clr-light);
-}
-
-#intro::after {
-    content: "";
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    bottom: 0;
-    left: calc(50vw - 0.5 * var(--width));
-    background-color: var(--clr-light);
-}
-
 #intro-overlay {
     background-color: rgba(0, 8, 23, 0.705);
     width: 100%;
     height: 100%;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+#intro-logo {
+    height: 7vh;
+    width: auto;
+    
+    padding: 1.5vh;
 }
 
 #intro-text {
@@ -194,6 +187,46 @@ header img {
     max-width: 560px;
     margin: 5vw;
 }
+
+/* Programming */
+
+#programming {
+    background-color: var(--clr-dark);
+}
+
+#programming-container {
+    margin: 1em;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#programming-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 1.1em;
+    
+    max-width: 450px;
+    margin: 1.5em;
+    padding: 1.8em;
+    border-radius: 0.8em;
+    
+    background-color: var(--clr-dark-sec);
+    box-shadow: 0 0 0.2em 0.2em #0000000f;
+}
+
+/* */
+
+
+
+
+
+
+
 
 /* Footer */
 
