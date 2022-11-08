@@ -220,7 +220,7 @@ i.fa-fire:hover {
 
 #programming {
     background-color: var(--clr-darkest);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,10 +298,17 @@ i.fa-fire:hover {
 #bookpoint {
     padding: 2em 1.5em;
     background-color: var(--clr-dark-sec);
-    
+
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+#bookpoint > img {
+    max-width: 350px;
+    height: auto;
+    box-shadow: 1em 1em 0 0 white;
+    border: 2px solid black;
 }
 
 /* Footer */
