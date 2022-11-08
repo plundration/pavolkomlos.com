@@ -60,22 +60,32 @@
         <!-- Programming -->
 
         <div id="programming">
-            <div style="background-color: rgba(0, 10, 25, 0.7)">
-                <div id="programming-container">
-                    <div id="programming-text" class="hover-up">
-                        <h2 style="padding-bottom: 0.5em; color: var(--clr-accent)"><i class="fa-solid fa-code"></i></h2>
-                        <div>Mám skusenosti s budovaním fullstack webstránok, 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM.</div>
-                    </div>
-                    <div class="big-cloud"></div>
-                    <div class="small-cloud"></div>
+            <div id="programming-container">
+                <div id="programming-text" class="hover-up">
+                    <h2 class="accent" style="padding-bottom: 0.5em"><i class="fa-solid fa-code"></i></h2>
+                    <div>Mám skusenosti s budovaním fullstack webstránok, 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM.</div>
                 </div>
+                <div class="big-cloud"></div>
+                <div class="small-cloud"></div>
+            </div>
 
-                <!-- Github link -->
-                <div></div>
+            <!-- Github link -->
+            <div id="github-link-container">
+                <a href="https://github.com/plundration">
+                    <img src="assets/img/github-logo.png" id="github-icon" />
+                </a>
             </div>
         </div>
+        
+        <div class="section-spacer" style="--in: var(--clr-darkest); --out: var(--clr-dark-sec);"></div>
 
         <!-- Bookstore -->
+        
+        <div id="bookpoint">
+            <img src="assets/img/bookpoint.png" style="max-width: 350px; height: auto; box-shadow: 1em 1em 0 0 white">
+        </div>
+        
+        <div class="section-spacer" style="--in: var(--clr-dark-sec); --out: var(--clr-darkest);"></div>
 
         <!-- 
             Games 
@@ -89,12 +99,14 @@
 
         <footer class="full-page">
             <div class="full-page" style="background-color: rgba(0, 10, 25, 0.8)" id="footer-container">
-                <div class="pixel smaller" id="footer-text"> 
-                    COPYRIGHT © 2022 PAVOL ALEXANDER KOMLOŠ 
-                </div>
+                <div class="pixel smaller" id="footer-text">COPYRIGHT © 2022 PAVOL ALEXANDER KOMLOŠ</div>
 
                 <div id="footer-contacts" class="monospace">
-                    <span class="pixel">PAVOL <br/> ALEXANDER <br/> KOMLOŠ </span>
+                    <span class="pixel">
+                        PAVOL <br />
+                        ALEXANDER <br />
+                        KOMLOŠ
+                    </span>
                     <img src="assets/img/plunder.svg" />
                     <a href="https://github.com/plundration">GITHUB</a>
                     <a href="mailto:pavol.a.komlos@gmail.com">EMAIL</a>
@@ -102,7 +114,7 @@
                 </div>
 
                 <div id="footer-text">
-                    <a href="#intro" class="pixel"> <i class="fa-solid fa-arrow-up-long" style="writing-mode: horizontal-tb"></i> BACK TO TOP </a>
+                    <a href="#intro" class="pixel"> <i class="fa-solid fa-arrow-left-long"></i> BACK TO TOP </a>
                 </div>
             </div>
         </footer>
