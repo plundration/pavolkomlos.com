@@ -298,12 +298,12 @@ i.fa-fire:hover {
 /* projects */
 
 #projects {
-    padding: 7em 0;
+    padding: 7vh 0;
     background-color: var(--clr-dark-sec);
 }
 
 .project {
-    padding: 4em 1.5em;
+    padding: 10% 1.5em;
 
     display: flex;
     justify-content: center;
@@ -323,7 +323,8 @@ i.fa-fire:hover {
 
 .project-desc {
     /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHH FIXXX */
-    width: max-content;
+    max-width: 230px;
+    width: 100%;
     flex-grow: 1;
     font-size: 0.75em;
     margin: 2em;
