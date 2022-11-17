@@ -319,12 +319,10 @@ i.fa-fire:hover {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    width: max-content;
 }
 
 .project-desc {
-    /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHH FIXXX */
-    width: max-content;
-    flex-grow: 1;
     font-size: 0.75em;
     margin: 2em;
 }
