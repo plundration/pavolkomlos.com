@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
-/* Custom properties */
+/* 
+-----------------
+Custom properties
+-----------------
+*/
 
 :root {
     /* --ff-primary: "Questrial", sans-serif; */
-    --ff-primary: "Chakra Petch", monospace;
-    --ff-mono: "IBM Plex Mono", monospace;
-    --ff-pixel: "TheGoodMonolith", monospace;
+    --ff-primary: 'Chakra Petch', monospace;
+    --ff-mono: 'IBM Plex Mono', monospace;
+    --ff-pixel: 'TheGoodMonolith', monospace;
     --fw-reg: 400;
     --fw-mid: 700;
     --fw-bold: 900;
@@ -38,10 +42,14 @@
     }
 }
 
-/* General styles */
+/* 
+--------------
+General styles
+-------------- 
+*/
 
 body {
-    background: var(--clr-dark);
+    background: var(--clr-darkest);
     color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
@@ -58,12 +66,11 @@ a {
     color: var(--clr-accent);
     text-decoration: none;
     font-weight: var(--fw-mid);
-    display: inline-block;
-    transition: transform 0.2s ease;
+    transition: 0.2s;
 }
 
 a:hover {
-    transform: scale(1.1, 1.1);
+    filter: brightness(1.25);
 }
 
 b,
@@ -74,7 +81,11 @@ section {
     padding: 4em 2em;
 }
 
-/* Typography */
+/*
+----------
+Typography
+----------
+*/
 
 h1,
 h2,
@@ -100,7 +111,11 @@ p {
     padding: 0;
 }
 
-/* Custom styles */
+/*
+-------------
+Custom styles
+-------------
+*/
 
 .full-page {
     height: 100vh;
@@ -162,7 +177,7 @@ p {
 }
 
 .page-bottom-scroll::before {
-    content: "";
+    content: '';
     position: relative;
     left: calc(-1 * var(--padding));
     display: inline-block;
@@ -177,10 +192,14 @@ p {
     background: linear-gradient(180deg, var(--in) 0%, var(--out) 100%);
 }
 
-/* */
+/*
+----------
+Intro page 
+---------- 
+*/
 
 #intro {
-    background-image: url("../assets/img/earth.gif");
+    background-image: url('../assets/img/earth.gif');
     background-size: cover;
 }
 
@@ -217,7 +236,11 @@ i.fa-fire:hover {
     color: #f49f0a;
 }
 
-/* Programming */
+/* 
+-----------
+Programming
+-----------
+*/
 
 #programming {
     background-color: var(--clr-darkest);
@@ -272,14 +295,14 @@ i.fa-fire:hover {
 .tagcloud {
     margin: 1.8em;
     font-size: 1.5em;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 #github-link-container {
     width: 200px;
     height: 200px;
     padding: 75px;
-    background-image: url("../assets/img/arrows.gif");
+    background-image: url('../assets/img/arrows.gif');
     background-size: cover;
     background-position: center;
 }
@@ -295,7 +318,11 @@ i.fa-fire:hover {
     transform: rotate(360deg);
 }
 
-/* projects */
+/* 
+--------
+Projects
+--------
+*/
 
 #projects {
     padding: 7vh 0;
@@ -360,17 +387,75 @@ i.fa-fire:hover {
     .project-desc {
         width: auto;
     }
-    
+
     .project-heading br {
         display: none;
     }
 }
 
-/* Footer */
+/* 
+------------
+Competitions
+------------ 
+*/
+
+#competitions {
+    margin: 10vh 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 2em;
+}
+
+#competitions-grid {
+    max-width: 800px;
+    margin: 1em;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+
+#competitions-grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.competition-container {
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    background-color: var(--clr-dark-sec);
+}
+
+.competition-title {
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.competition-container ul {
+    padding: 0;
+}
+
+.competition-container li {
+    margin: 0.5em 0;
+
+    list-style: none;
+    border-left: solid 4px var(--clr-light-sec);
+    padding-left: .75em;
+}
+
+/* 
+------
+Footer
+------ 
+*/
 
 footer {
     background-size: cover;
-    background-image: url("../assets/img/lights.jpg");
+    background-image: url('../assets/img/lights.jpg');
     background-position: center;
 }
 
