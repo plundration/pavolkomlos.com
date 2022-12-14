@@ -14,11 +14,14 @@
         <!-- For different browsers -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,700,900|Chakra+Petch:400,700,900|IBM+Plex+Mono:400,900&display=swap" />
-        <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/thegoodmonolith" />
 
         <!-- Better from CDN (cached in browser!) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+        <!-- Tagcloud config and entrypoint -->
+        <script src="tagcloud.js" defer></script>
 
         <!-- Smooth scrolling for 'a' tags withing page -->
         <script type="text/javascript">
@@ -27,8 +30,6 @@
                 $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top }, 500);
             });
         </script>
-
-        <script src="tagcloud.js" defer></script>
     </head>
 
     <body>
@@ -259,14 +260,16 @@
                         ALEXANDER <br />
                         KOMLOŠ
                     </span>
+
                     <img src="assets/img/plunder.svg" />
-                    <a href="https://github.com/plundration">GITHUB</a>
-                    <a href="mailto:pavol.a.komlos@gmail.com">EMAIL</a>
-                    <a href="https://plundration.github.io/">NOTES</a>
+                    
+                    <a class="hover-enlarge" href="https://github.com/plundration">GITHUB</a>
+                    <a class="hover-enlarge" href="mailto:pavol.a.komlos@gmail.com">EMAIL</a>
+                    <a class="hover-enlarge" href="https://plundration.github.io/">NOTES</a>
                 </div>
 
                 <div id="footer-text">
-                    <a href="#intro" class="pixel"> <i class="fa-solid fa-arrow-left-long"></i> BACK TO TOP </a>
+                    <a href="#intro" class="pixel hover-enlarge"> <i class="fa-solid fa-arrow-left-long"></i> BACK TO TOP </a>
                 </div>
             </div>
         </footer>

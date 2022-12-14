@@ -11,7 +11,6 @@ Custom properties
 */
 
 :root {
-    /* --ff-primary: "Questrial", sans-serif; */
     --ff-primary: 'Chakra Petch', monospace;
     --ff-mono: 'IBM Plex Mono', monospace;
     --ff-pixel: 'TheGoodMonolith', monospace;
@@ -24,7 +23,6 @@ Custom properties
     --clr-dark-sec: #131a26;
     --clr-light: #f4edea;
     --clr-light-sec: #c5d8d1;
-    /* --clr-accent: #06BCC1; */
     --clr-accent: #25d09d;
 
     --fs-h1: 4rem;
@@ -71,6 +69,10 @@ a {
 
 a:hover {
     filter: brightness(1.25);
+}
+
+a:hover:has(> img) {
+    filter: brightness(1);
 }
 
 b,
@@ -152,11 +154,11 @@ Custom styles
 }
 
 .hover-enlarge {
-    transition: transform 0.2s ease;
+    transition: 0.2s;
 }
 
 .hover-enlarge:hover {
-    transform: scale(1.03);
+    scale: 1.05;
 }
 
 .hover-up {
