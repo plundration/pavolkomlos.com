@@ -420,10 +420,18 @@ Competitions
     gap: 3em;
 }
 
+@media screen and (max-width: 600px) {
+    #competitions-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 #competitions-grid > div {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
 }
 
 .competition-container {
