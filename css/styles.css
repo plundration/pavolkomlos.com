@@ -72,7 +72,7 @@ a:hover {
 }
 
 a:hover:has(> img) {
-    filter: brightness(1);
+    filter: none !important;
 }
 
 b,
