@@ -7,7 +7,7 @@
 
         <title>Pavol Komloš</title>
         <meta name="description" content="Pavol Alexander Komloš. Fullstack web developer, študent." />
-        <link rel="icon" href="/assets/img/favicon.svg" />
+        <link rel="icon" href="/assets/img/plunder.svg" />
 
         <link rel="stylesheet" href="/css/styles.css" />
 
@@ -33,6 +33,7 @@
     </head>
 
     <body>
+
         <!-- Intro-->
 
         <div class="full-page" id="intro">
@@ -50,24 +51,48 @@
                     <p class="smaller pixel" style="padding: 0.5em">pavol alexander komloš</p>
 
                     <p>
-                        <i class="fa-solid fa-fire" style="font-size: 0.8em"> </i> <i>fullstack web developer,</i>
-                        študent gymnázia poštová 9, prepracovaný a unavený, ale skúsený
+                        <i class="fa-solid fa-fire" style="font-size: 0.8em"> </i> <i>fullstack web developer,</i> <br/>
+                        18-ročný študent gymnázia poštová 9, prepracovaný a unavený, ale skúsený
                     </p>
                 </div>
-                <div class="page-bottom-scroll">SCROLL</div>
+                <div class="page-bottom-scroll" onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })">SCROLL</div>
             </div>
         </div>
 
         <!-- Programming -->
 
-        <div id="programming">
-            <div id="programming-container">
-                <div id="programming-text" class="hover-up">
-                    <h2 class="accent" style="padding-bottom: 0.5em"><i class="fa-solid fa-code"></i></h2>
-                    <div>Mám skusenosti s budovaním fullstack webstránok v [React, Vue, Svelte], 2D a 3D game developmentom a dizajnovaním game engineov. Pracoval som vo viacerých jazykoch low aj high level. Preferujem arch-based distros a NeoVIM 😎.</div>
+        <div id='programming'>
+            <h2>Programovanie</h2>
+
+            <div id='programming-tech'>
+                <div id='programming-tech-text'>
+                    Programujem už od základnej školy, venoval som sa game developmentu (hry v Godot a Unity, a vlastnom engine v C++).
+                    V prvom ročníku gymnázia som začal s vývojom web stránok (FE aj BE).
+                    Používam Linux a NeoVim.
                 </div>
-                <div class="big-cloud"></div>
-                <div class="small-cloud"></div>
+
+                <div id='programming-tech-icons'>
+                    <div> <img src="assets/img/tech/svelte.svg" alt="svelte"> </div>
+                    <div> <img src="assets/img/tech/react.svg" alt="react"> </div>
+                    <div> <img src="assets/img/tech/vue.svg" alt="vue"> </div>
+                    <div> <img src="assets/img/tech/unity.svg" alt="unity"> </div>
+                    <div> <img src="assets/img/tech/go.svg" alt="go"> </div>
+                    <div> <img src="assets/img/tech/cpp.svg" alt="cpp"> </div>
+                    <div> <img src="assets/img/tech/sql.svg" alt="sql"> </div>
+                </div>
+
+            </div>
+            
+
+            <div id="programming-work">
+                <h3>Pracovné skúsenosti</h3>
+                <ul>
+                    <li>FE dev pre <a href='https://www.sodehal.com'>Sodehal a.s.</a></li>
+                    <li>Full-Stack dev pre <a href='https://www.flufbrikety.sk'>študentskú firmu Fluf Brikety</a></li>
+                    <li>Stáž v laboratóriu na Geochemickom ústave SAV v Košiciach</li>
+                </ul>
+                
+
             </div>
 
             <!-- Github link -->
@@ -76,14 +101,52 @@
                     <img src="assets/img/github-logo.png" id="github-icon" />
                 </a>
             </div>
+
         </div>
 
-        <div class="section-spacer" style="--in: var(--clr-darkest); --out: var(--clr-dark-sec)"></div>
 
-        <!-- Bookstore -->
+
+        <div class="section-spacer" style="--in: var(--clr-dark); --out: var(--clr-dark-sec)"></div>
+        
+        <!-- Projekty -->
 
         <div id="projects">
+            <h2>Projekty</h2>
+
             <div class="project">
+                <div class="project-text">
+                    <div class="project-heading">
+                        FLUF <br />
+                        ESHOP
+                    </div>
+                    <div class="project-desc pixel uppercase">
+                        <p class="hover-enlarge larger">
+                            eshop s briketami <br />
+                            <br />
+                            pre študentskú firmu fluf
+                        </p>
+                        <br />
+                        <p>
+                            technológie: <br />
+                            <br />
+                            react <br />
+                            node.js <br />
+                            stripe <br />
+                        </p>
+                        <br />
+                        <p>
+                            team: <br />
+                            <br />
+                            solo
+                        </p>
+                    </div>
+                </div>
+                <a href="https://flufbrikety.sk" class="hover-enlarge">
+                    <img class="project-img" src="assets/img/fluf.png" />
+                </a>
+            </div>
+
+            <div class="project" style="flex-direction: row-reverse">
                 <div class="project-text">
                     <div class="project-heading">
                         BOOK <br />
@@ -121,7 +184,7 @@
                 </a>
             </div>
 
-            <div class="project" style="flex-direction: row-reverse">
+            <div class="project">
                 <div class="project-text">
                     <div class="project-heading">ADVENT</div>
                     <div class="project-desc pixel uppercase">
@@ -151,49 +214,34 @@
                 </a>
             </div>
 
-            <div class="project">
+            <div class="project" style="flex-direction: row-reverse">
                 <div class="project-text">
                     <div class="project-heading">
-                        FLUF <br />
-                        ESHOP
+                        PIXEL <br />
+                        ENGINE
                     </div>
                     <div class="project-desc pixel uppercase">
-                        <p class="hover-enlarge larger">
-                            eshop s briketami <br />
-                            <br />
-                            pre študentskú firmu fluf
-                        </p>
+                        <p class="hover-enlarge larger">custom renderer na <b>3d pixel art</b> <br /></p>
                         <br />
                         <p>
-                            technológie: <br />
+                            tvorený pomocou Unity3D engine nedokončený, plánujem sa k tomu
                             <br />
-                            react <br />
-                            node.js <br />
-                            stripe <br />
+                            vrátiť cez gap year
                         </p>
                         <br />
                         <p>
                             team: <br />
-                            <br />
                             solo
                         </p>
                     </div>
                 </div>
-                <a href="https://flufbrikety.sk" class="hover-enlarge">
-                    <img class="project-img" src="assets/img/fluf.png" />
+                <a class="hover-enlarge" href="https://plundration.itch.io/horizon">
+                    <video class='project-img' src='assets/img/pixel.mp4' autoplay loop>
                 </a>
             </div>
         </div>
 
-        <div class="section-spacer" style="--in: var(--clr-dark-sec); --out: var(--clr-darkest)"></div>
-
-        <!-- 
-            Games 
-                Horizon    
-                Pixel art engine 
-        -->
-
-        <!-- Other projects -->
+        <div class="section-spacer" style="--in: var(--clr-dark-sec); --out: var(--clr-dark)"></div>
 
         <!-- Competitions and certificates -->
 
@@ -273,21 +321,17 @@
                         <!-- Programovanie -->
                         <div class="competition-title"><i class="fa-solid fa-code"></i></div>
                         <ul>
-                            <li>2. miesto Celoslovenské kolo 2018/19</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2017-18_1.pdf">1. miesto</a> 1. Krajské kolo 2017/18</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2018-19_2.pdf">3. miesto</a> 2. Krajské kolo 2018/19</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2017-18_2.pdf">4. miesto</a> 2. Krajské kolo 2017/18</li>
+                            <li>PALMA junior: <a href="/assets/diplomy/Palma_CK_2020-21.pdf">2. miesto Celoslovenské kolo Kat. GURU 2020/21 </a></li>
+                            <li>Účasť v HackKošice hackathon 2023</li>
+                            <li>Účasť v Deutsche-Telekom hackathon 2022</li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- 
-                    Informatika
-                    Csirt, palma
-                    <li> PALMA junior: <a href="/assets/diplomy/Palma_CK_2020-21.pdf">2. miesto Celoslovenské kolo Kat. GURU 2020/21 </a> </li>
-                -->
             </div>
         </div>
+
+        <div class="section-spacer" style="--in: var(--clr-dark); --out: #050D1A"></div>
+
 
         <footer class="full-page">
             <div class="full-page" style="background-color: rgba(0, 10, 25, 0.8)" id="footer-container">
