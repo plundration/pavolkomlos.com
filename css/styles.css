@@ -65,7 +65,12 @@ a {
   color: var(--clr-accent);
   text-decoration: none;
   font-weight: var(--fw-mid);
-  transition: 0.2s;
+  transition: 0.1s;
+}
+
+a:not(:has(*)):hover {
+  /* color: var(--clr-light); */
+  filter: brightness(1.4);
 }
 
 b,
@@ -118,7 +123,7 @@ Custom styles
   font-size: 0.65em;
 }
 .larger {
-  font-size: 1.15em;
+  font-size: 1.25em;
 }
 
 .monospace {
@@ -144,11 +149,12 @@ Custom styles
 }
 
 .hover-enlarge {
-  transition: 0.2s;
+  transition: 0.1s;
+  display: inline-block;
 }
 
 .hover-enlarge:hover {
-  scale: 1.05;
+  scale: 1.1;
 }
 
 .hover-up {
@@ -361,12 +367,19 @@ projekty
 */
 
 #projekty {
-  padding: 7vh 0;
+  max-width: 1000px;
+}
+
+#projekty h2 {
   text-align: center;
 }
 
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .project {
-  margin: 9em 1.5em;
+  margin: 7em 0;
 
   display: flex;
   justify-content: center;
@@ -380,60 +393,40 @@ projekty
 
 .project-text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: max-content;
+  /* align-items: center; */
+  /* flex: 1; */
+  gap: 1em;
+  max-width: 400px;
 }
 
 .project-desc {
-  max-width: 280px;
+  /* max-width: 280px; */
   width: 100%;
   flex-shrink: 0;
   font-size: 0.75em;
-  margin: 2em;
 }
 
 .project-heading {
-  font-size: 7em;
+  font-size: 3em;
   line-height: 0.8;
-  writing-mode: sideways-lr;
-}
-
-@media (max-width: 600px) {
-  .project-text {
-    flex-direction: column;
-  }
-
-  .project-heading {
-    text-align: center;
-    writing-mode: inherit;
-  }
 }
 
 .project-img {
   width: 100%;
-  max-width: 420px;
   height: auto;
+  max-width: 400px;
+  max-height: 300px;
   border: 8px solid var(--clr-darkest);
   border-radius: 4px;
   box-shadow: 0 0 1em 1em #0000001a;
 }
 
-@media (max-width: 500px) {
-  .project-text {
-    align-items: center;
-  }
-
-  .project-heading {
-    font-size: 4em;
-  }
-  .project-desc {
-    width: auto;
-  }
-
-  .project-heading br {
-    display: none;
+/* @media (max-width: 500px) { */
+@media (max-width: 600px) {
+  .project {
+    gap: 1.5em;
   }
 }
 
