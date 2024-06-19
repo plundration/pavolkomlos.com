@@ -1,474 +1,644 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sk">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="darkreader-lock" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="darkreader-lock" />
 
-        <title>Pavol Komloš</title>
-        <meta name="description" content="Pavol Alexander Komloš. Fullstack web developer, študent." />
-        <link rel="icon" href="/assets/img/plunder.svg" />
+    <title>Pavol Komloš</title>
+    <meta
+      name="description"
+      content="Pavol Alexander Komloš. Fullstack web developer, študent."
+    />
+    <link rel="icon" href="/assets/img/plunder.svg" />
 
-        <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
-        <!-- For different browsers -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,700,900|Chakra+Petch:400,700,900|IBM+Plex+Mono:400,900&display=swap" />
-        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/thegoodmonolith" />
+    <!-- For different browsers -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Questrial:400,700,900|Chakra+Petch:400,700,900|IBM+Plex+Mono:400,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.cdnfonts.com/css/thegoodmonolith"
+    />
 
-        <!-- Better from CDN (cached in browser!) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <!-- Better from CDN (cached in browser!) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
-        <!-- Tagcloud config and entrypoint -->
-        <script src="tagcloud.js" defer> </script>
+    <!-- Tagcloud config and entrypoint -->
+    <script src="tagcloud.js" defer></script>
 
-        <!-- Smooth scrolling for 'a' tags withing page -->
-        <script type="text/javascript">
-            $(document).on("click", 'a[href^="#"]', function (e) {
-              e.preventDefault();
-              $("html, body").animate(
-                { scrollTop: $($.attr(this, "href")).offset().top - 50 },
-                500,
-              );
-            });
-        </script>
+    <!-- Smooth scrolling for 'a' tags withing page -->
+    <script type="text/javascript">
+      $(document).on("click", 'a[href^="#"]', function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+          { scrollTop: $($.attr(this, "href")).offset().top - 50 },
+          500,
+        );
+      });
+    </script>
 
-        <script type="text/javascript">
-        </script>
-    </head>
+    <script type="text/javascript"></script>
+  </head>
 
-    <body>
+  <body>
+    <header>
+      <img id="intro-logo" src="assets/img/plunder.svg" />
+      <!-- <span>PRÁCA</span> -->
+    </header>
 
-        <header>
-            <img id="intro-logo" src="assets/img/plunder.svg" />
-            <!-- <span>PRÁCA</span> -->
-        </header>
+    <!-- Intro-->
 
-        <!-- Intro-->
-
-        <div class="full-page" id="intro">
-            <div id="intro-overlay">
-                <div id="intro-text" class="uppercase">
-                    <div>
-                    <div class="smaller accent icon-display" style="padding: 0.5em;">
-                        <i class="fa-solid fa-code"></i>
-                        <i class="fa-solid fa-flask-vial"></i>
-                        <i class="fa-solid fa-atom"></i>
-                        <i class="fa-solid fa-calculator"></i>
-                        <i class="fa-solid fa-bacterium"></i>
-                    </div>
-
-                    <p class="smaller pixel">pavol alexander komloš</p>
-
-                    <p>
-                        <i>fullstack web dev</i> <br/>
-                        <i>študent na cuni</i> <br/>
-                    </p>
-
-                    <p style="display: flex; flex-direction: column;">
-                        <a href="#praca">práca</a>
-                        <a href="#vzdelanie">vzdelanie</a>
-                        <a href="#programovanie">programovanie</a>
-                        <a href="#projekty">moje projekty</a>
-                        <a href="#sutaze">sútaže</a>
-                        <a href="#ostatne">ostatné</a>
-                        <a href="#kontakty">kontakty</a>
-                    </p>
-                    </div>
-                </div>
-                <div class="page-bottom-scroll" onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })">SCROLL</div>
-            </div>
-        </div>
-
-        <!-- Programming -->
-
-        <section style="background-color: var(--clr-dark);"> 
-            <div id='praca'>
-                <h2>Práca</h2>
-                <table>
-                    <tr>
-                        <td>2024 <br/> | <br/> 2023</td>
-
-                        <td>
-                            Full-stack web dev a admin pre <a href='https://www.sodehal.com'>Sodehal s.r.o</a>
-                            <ul>
-                                <li>Kolaboratívny vývoj a údržba viacerých webstránok</li>
-                                <li>Práca s klientami</li>
-                                <li>Vue, Svelte(Kit), Postgres, Google AdSense, SEO</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>
-                            Tvorba Eshopu pre <a href='https://www.flufbrikety.sk'>študentskú firmu Fluf Brikety</a>
-                            <ul>
-                                <li>Sólo zákazka aj s vlastným dizajnom</li>
-                                <li>React, NodeJS, MariaDB, Stripe na platby</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>
-                            Bookpoint - stránka knižnice pre <a href='https://www.gympos.sk'>Gymnázium Poštová 9</a>
-                            <ul>
-                                <li>React, NodeJS, MariaDB</li>
-                                <li>Projekt získal <b>ocenenie KSK</b></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>
-                            Webstránka pre projekt Erazmus "Salt over gold", v ktorom bolo Slovensko lídrom zo 7 krajín</a>
-                            <ul>
-                                <li>HTML + CSS + custom static site generator</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Stáž v laboratóriu v Geochemickom ústave SAV v Košiciach</td>
-                    </tr>
-                </table>
+    <div class="full-page" id="intro">
+      <div id="intro-overlay">
+        <div id="intro-text" class="uppercase">
+          <div>
+            <div class="smaller accent icon-display" style="padding: 0.5em">
+              <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-flask-vial"></i>
+              <i class="fa-solid fa-atom"></i>
+              <i class="fa-solid fa-calculator"></i>
+              <i class="fa-solid fa-bacterium"></i>
             </div>
 
-            <div id="vzdelanie">
-                <h2>Vzdelanie</h2>
-                <table>
-                    <tr>
-                        <td>DNES <br/> | <br/> 2024</td>
-                        <td>
-                            Študujem <b>Molekulánu biológiu</b> na Prírodovedeckej Fakulte <a href='https://www.cuni.cz'>Karlovej Univerzity</a> v Prahe 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024 <br/> | <br/> 2020</td>
-                        <td>
-                            Študent <b>matematickej triedy</b> na <a href='https://www.gympos.sk'>Gymnáziu Poštová 9</a> v Košiciach
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2020 <br/> | <br/> 2011</td>
-                        <td>
-                            Žiak triedy pre <b>nadané deti</b> (APROGEN) na <a href='https://zskroke.edupage.org'>ZŠ Krosnianskej 4</a> v Košiciach
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        
-        </section>
+            <p class="smaller pixel">pavol alexander komloš</p>
 
-        <div class="section-spacer" style="--in: var(--clr-dark); --out: var(--clr-dark-sec);"></div>
-
-        <section style="background-color: var(--clr-dark-sec)"> 
-            <div id='programovanie'>
-                <h2>Programovanie</h2>
-
-                <p>
-                    Programujem od základnej školy, už 6 rokov a z toho 3 roky profesionálne. Venoval som sa zatial:
-                </p>
-                <ul>
-                    <li>Game developmentu - Godot (GDScript, C#), Unity (C#), Raylib (C a C++)</li>
-                    <li>Game engine designu v C++</li>
-                    <li>Elektronike (RPi, ESP32)</li>
-                    <li>Web developmentu</li>
-                    <ul>
-                        <li>FE - React, Vue, Svelte</li>
-                        <li>BE - NodeJS, Go</li>
-                        <li>DB - SQL, PocketBase</li>
-                        <li>SCSS, TypeScript</li>
-                        <li>Docker, Nginx, SEO, AdSense</li>
-                    </ul>
-                </ul>
-                <p>
-                    Už 4 roky používam <b>Linux</b> <i class="fa-brands fa-linux"></i> (ani za boha sa nevratím na temnú stranu). <br/>
-                    Kvôli mojej obsesii s rýchlosťou používam <b>NeoVim</b> a viem písať všetými 10 prstami cca 90 WPM.
-                    Milujem <b>Markdown</b> a <b>Latex</b>, používam ich na svoje poznámky.
-                </p>
-
-                <!-- Github link -->
-
-                <div id="github-link-center"><div id="github-link-container">
-                    <a href="https://github.com/plundration">
-                        <img src="assets/img/github-logo.png" id="github-icon" />
-                    </a>
-                </div></div>
-            </div>
-
-        <!-- Projekty -->
-
-        <div id="projekty">
-            <h2>Galéria projektov</h2>
-
-                <div class="projects">
-            <div class="project">
-                <div class="project-text">
-                    <div class="project-heading">
-                        FLUF ESHOP
-                    </div>
-                    <div class="project-desc pixel uppercase">
-                        <p>
-                            <p class="hover-enlarge larger">
-                                eshop s briketami pre študentskú firmu fluf
-                            </p>
-                        </p>
-                        <br />
-                        <p>
-                            technológie: <br />
-                            <br />
-                            react + node.js + mariadb + stripe
-                        </p>
-                        <br />
-                        <p>
-                            team: solo
-                        </p>
-                    </div>
-                </div>
-                <a class="hover-enlarge">
-                    <img class="project-img" src="assets/img/fluf.png" />
-                </a>
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <div class="project-heading">
-                        BOOK POINT
-                    </div>
-                    <div class="project-desc pixel uppercase">
-                        <p><p class="hover-enlarge larger">
-                            webstránka knižnice gymnázium poštová 9
-                        </p></p>
-                        <br />
-                        <p>
-                            technológie: <br />
-                            <br />
-                            react + node.js + mysql + nginx + docker
-                        </p>
-                        <br />
-                        <p>
-                            team: ja + adam harmanský
-                        </p>
-                        <br />
-                        <p class="accent">ocenenie ksk</p>
-                    </div>
-                </div>
-                <a class="hover-enlarge">
-                    <img class="project-img" src="assets/img/bookpoint.png" />
-                </a>
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <div class="project-heading">ADVENT</div>
-                    <div class="project-desc pixel uppercase">
-                        <p><p class="hover-enlarge larger">
-                            súťaž advent programovania na gymnáziu poštová 9
-                        </p></p>
-                        <br />
-                        <p>
-                            programovacia súťaž vo forme adventného kalendára
-                        <br />
-                            ceny sponzorované školou
-                        </p>
-                        <br />
-                        <p>
-                            team: ja + adam harmanský
-                        </p>
-                    </div>
-                </div>
-                <a class="hover-enlarge">
-                    <img class="project-img" src="assets/img/advent.png" />
-                </a>
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <div class="project-heading">
-                        PIXEL ENGINE
-                    </div>
-                    <div class="project-desc pixel uppercase">
-                        <p><p class="hover-enlarge larger">custom renderer na <b>3d pixel art</b></p></p>
-                        <br />
-                        <p>
-                            tvorený pomocou Unity3D engine, nedokončený, plánujem sa k tomu vrátiť cez gap year
-                        </p>
-                        <br />
-                        <p>
-                            team: solo
-                        </p>
-                    </div>
-                </div>
-                <a class="hover-enlarge" href="https://plundration.itch.io/horizon">
-                    <video class='project-img' src='assets/img/pixel.mp4' autoplay loop>
-                </a>
-            </div>
-
-            <div class="project">
-                <div class="project-text">
-                    <div class="project-heading">
-                        HORIZON
-                    </div>
-                    <div class="project-desc pixel uppercase">
-                        <p><p class="hover-enlarge larger">moja prvá 2d hra</p></p>
-                        <br />
-                        <p>
-                            tvorená pomocou godot engine a gdscript
-                        </p>
-                        <br />
-                        <p>
-                            team: solo
-                        </p>
-                    </div>
-                </div>
-                <a class="hover-enlarge" href="https://plundration.itch.io/horizon">
-                    <img class="project-img" src="assets/img/horizon.webp" />
-                </a>
-            </div>
-                </div>
-        </div>
-        </section>
-
-        <div class="section-spacer" style="--in: var(--clr-dark-sec); --out: var(--clr-dark);"></div>
-
-        <section>
-
-        <div id="sutaze">
-            <h2>Súťaže</h2>
-
-            <div id="sutaze-grid">
-                <!-- TODO Add icon to links -->
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Chémia -->
-                        <div class="sutaze-title"><i class="fa-solid fa-flask-vial"></i></div>
-                        <ul>
-                            <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_CK_2023-24.pdf">8. miesto Celoštátne kolo kat. A 2023/24</a></li> -->
-                            <li>Chemická olympiáda: 8. miesto Celoštátne kolo kat. A 2023/24</li>
-                            <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_CK_2022-23.pdf">Úspešný riešiteľ Celoštátneho kola kat. A 2022/23</a></li>
-                            <!-- <li>Chemikláni Pardubice 2024: <a href="/assets/diplomy/ChO_CK_2022-23.pdf">1. miesto z Česko-Slovenska</a></li> -->
-                            <li>Chemikláni Pardubice 2024: 1. miesto z Česko-Slovenska</li>
-                            <!-- <li>Chemický náboj: <a href="/assets/diplomy/chemicky_naboj_2023-24.pdf">2. miesto Celoštátne kolo Seniori 2024</a></li> -->
-                            <li>Chemický náboj: 2. miesto Celoštátne kolo Seniori 2024</li>
-                            <li>Chemický náboj: <a href="/assets/diplomy/chemicky_naboj_2022-23.pdf">3. miesto Celoštátne kolo Seniori 2023</a></li>
-                            <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_KK_2020-21.pdf">3. miesto Krajské kolo Kat. A 2023/24</a></li> -->
-
-                            <!-- <li>Chemická olympiáda: 3. miesto Krajské kolo Kat. A 2023/24</li> -->
-                            <!-- <li>Chemická olympiáda: 4. miesto Krajské kolo Kat. B 2021/22</li> -->
-                            <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_KK_2020-21.pdf">5. miesto Krajské kolo Kat. C 2020/21</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Biológia -->
-                        <div class="sutaze-title"><i class="fa-solid fa-bacterium"></i></div>
-                        <ul>
-                            <!-- <li>Biologická olympiáda: <a href="/assets/diplomy/BiO_CK_2021-22.pdf">3. miesto Celoslovenské kolo Kat. A 2023/24</a></li> -->
-                            <li>Biologická olympiáda: 3. miesto Celoslovenské kolo Kat. A 2023/24</li>
-                            <li>Biologická olympiáda: <a href="/assets/diplomy/BiO_CK_2021-22.pdf">2. miesto Celoslovenské kolo Kat. B 2021/22</a></li>
-                            <li>Biologická olympiáda: <a href="/assets/diplomy/BiO_KK_2021-22.pdf">2. miesto Krajské kolo Kat. B 2021/22</a></li>
-                            <li>Biologická olympiáda: <a href="/assets/diplomy/BiO_OK_2019-20.pdf">1. miesto Okresné kolo Kat. C 2019/20</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Matematika -->
-                        <div class="sutaze-title"><i class="fa-solid fa-square-root-variable"></i></div>
-                        <ul>
-                            <li>Matematická olympiáda: <a href="/assets/diplomy/MO_KK_2021-22.pdf">4. miesto Krajské kolo Kat. B 2021/22</a></li>
-                            <li>Matematický náboj: <a href="/assets/diplomy/MatNaboj_2021-22.pdf">3. miesto zo 151 Celoslovenské kolo</a></li>
-                            <li>Junior matematický náboj: 1. miesto Kraj, 45. miesto Medzinárodne z 900 2019/20</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Fyzika -->
-                        <div class="sutaze-title"><i class="fa-solid fa-atom"></i></div>
-                        <ul>
-                            <li>Fyzikláni 2022: <a href="/assets/diplomy/Fyziklani_Praha_2021-22.pdf">2. miesto Medzinárodné kolo v Prahe </a></li>
-                            <li>Fyzikálny náboj: <a href="/assets/diplomy/fyzikalny_naboj_2022-23.pdf">1. miesto Seniori kolo 2021/22 </a></li>
-                            <li>Fyzikláni Online: <a href="/assets/diplomy/Fyziklani_Online_2021-22.pdf">12. miesto z 215 Medzinárodné kolo 2021/22 </a></li>
-                            <li>Fyzikálna olympiáda: <a href="/assets/diplomy/FO_KK_2021-22.pdf">4. miesto Krajské kolo Kat. B 2021/22</a></li>
-                            <li>Turnaj Mladých Fyzikov: <a href="/assets/diplomy/TMF_2020-21.pdf">Úspešný riešiteľ Celoslovenské kolo 2020/21</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Debatiáda -->
-                        <div class="sutaze-title">Debatiáda</div>
-                        <ul>
-                            <li>2. miesto Celoslovenské kolo 2018/19</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2017-18_1.pdf">1. miesto</a> 1. Krajské kolo 2017/18</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2018-19_2.pdf">3. miesto</a> 2. Krajské kolo 2018/19</li>
-                            <li><a href="/assets/diplomy/SDA_KK_2017-18_2.pdf">4. miesto</a> 2. Krajské kolo 2017/18</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="sutaze-container">
-                        <!-- Programovanie -->
-                        <div class="sutaze-title"><i class="fa-solid fa-code"></i></div>
-                        <ul>
-                            <li>PALMA junior: <a href="/assets/diplomy/Palma_CK_2020-21.pdf">2. miesto Celoslovenské kolo Kat. GURU 2020/21 </a></li>
-                            <li>Účasť v HackKošice hackathon 2023</li>
-                            <li>Účasť v Deutsche-Telekom hackathon 2022</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id='ostatne'>
-            <h2>Ostatné</h2>
             <p>
-                Mojim rodným jazykom je <b>slovenčina</b>, ale niekedy mám pocit , že lepšie hovorím po <b>anglicky</b>.
-                Okrem toho som sa 5 rokov učil <b>nemčinu</b> a 4 roky <b>ruštinu</b>. 
-            </p>
-            <p>
-                Venujem sa športu, najmä behu a cyklistike. 
-                Mám rád všednú hudbu, od Debussyho po Kurta Cobaina. Hrajem na klavír a gitaru.
-                Rád cestujem a spoznávam nové kultúry.
+              <i>fullstack web dev</i> <br />
+              <i>študent na cuni</i> <br />
             </p>
 
-                    
+            <p style="display: flex; flex-direction: column">
+              <a href="#praca">práca</a>
+              <a href="#vzdelanie">vzdelanie</a>
+              <a href="#programovanie">programovanie</a>
+              <a href="#projekty">moje projekty</a>
+              <a href="#sutaze">sútaže</a>
+              <a href="#ostatne">ostatné</a>
+              <a href="#kontakty">kontakty</a>
+            </p>
+          </div>
         </div>
-        </section>
+        <div
+          class="page-bottom-scroll"
+          onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })"
+        >
+          SCROLL
+        </div>
+      </div>
+    </div>
 
-        <div class="section-spacer" style="--in: var(--clr-dark); --out: #050d1a;"></div>
+    <!-- Programming -->
 
-        <footer class="full-page">
-            <div class="full-page" style="background-color: rgba(0, 10, 25, 0.8);" id="footer-container">
-                <div class="pixel smaller" id="footer-text">COPYRIGHT © 2023 PAVOL ALEXANDER KOMLOŠ</div>
+    <section style="background-color: var(--clr-dark)">
+      <div id="praca">
+        <h2>Práca</h2>
+        <table>
+          <tr>
+            <td>
+              2024 <br />
+              | <br />
+              2023
+            </td>
 
-                <div id="footer-contacts" class="monospace">
-                    <span class="pixel">
-                        PAVOL <br />
-                        ALEXANDER <br />
-                        KOMLOŠ
-                    </span>
+            <td>
+              Full-stack web dev a admin pre
+              <a href="https://www.sodehal.com">Sodehal s.r.o</a>
+              <ul>
+                <li>Kolaboratívny vývoj a údržba viacerých webstránok</li>
+                <li>Práca s klientami</li>
+                <li>Vue, Svelte(Kit), Postgres, Google AdSense, SEO</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>
+              Tvorba Eshopu pre
+              <a href="https://www.flufbrikety.sk"
+                >študentskú firmu Fluf Brikety</a
+              >
+              <ul>
+                <li>Sólo zákazka aj s vlastným dizajnom</li>
+                <li>React, NodeJS, MariaDB, Stripe na platby</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>
+              Bookpoint - stránka knižnice pre
+              <a href="https://www.gympos.sk">Gymnázium Poštová 9</a>
+              <ul>
+                <li>React, NodeJS, MariaDB</li>
+                <li>Projekt získal <b>ocenenie KSK</b></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>
+              Webstránka pre projekt Erazmus "Salt over gold", v ktorom bolo
+              Slovensko lídrom zo 7 krajín
+              <ul>
+                <li>HTML + CSS + custom static site generator</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>Stáž v laboratóriu v Geochemickom ústave SAV v Košiciach</td>
+          </tr>
+        </table>
+      </div>
 
-                    <img src="assets/img/plunder.svg" id="kontakty" />
+      <div id="vzdelanie">
+        <h2>Vzdelanie</h2>
+        <table>
+          <tr>
+            <td>
+              DNES <br />
+              | <br />
+              2024
+            </td>
+            <td>
+              Študujem <b>Molekulánu biológiu</b> na Prírodovedeckej Fakulte
+              <a href="https://www.cuni.cz">Karlovej Univerzity</a> v Prahe
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2024 <br />
+              | <br />
+              2020
+            </td>
+            <td>
+              Študent <b>matematickej triedy</b> na
+              <a href="https://www.gympos.sk">Gymnáziu Poštová 9</a> v Košiciach
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2020 <br />
+              | <br />
+              2011
+            </td>
+            <td>
+              Žiak triedy pre <b>nadané deti</b> (APROGEN) na
+              <a href="https://zskroke.edupage.org">ZŠ Krosnianskej 4</a> v
+              Košiciach
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
-                    <a class="hover-enlarge" href="https://github.com/plundration">GITHUB</a>
-                    <a class="hover-enlarge" href="mailto:pavol.a.komlos@gmail.com">EMAIL</a>
-                    <a class="hover-enlarge" href="https://plundration.github.io/">NOTES</a>
+    <div
+      class="section-spacer"
+      style="--in: var(--clr-dark); --out: var(--clr-dark-sec)"
+    ></div>
+
+    <section style="background-color: var(--clr-dark-sec)">
+      <div id="programovanie">
+        <h2>Programovanie</h2>
+
+        <p>
+          Programujem od základnej školy, už 6 rokov a z toho 3 roky
+          profesionálne. Venoval som sa zatial:
+        </p>
+        <ul>
+          <li>
+            Game developmentu - Godot (GDScript, C#), Unity (C#), Raylib (C a
+            C++)
+          </li>
+          <li>Game engine designu v C++</li>
+          <li>Elektronike (RPi, ESP32)</li>
+          <li>Web developmentu</li>
+          <ul>
+            <li>FE - React, Vue, Svelte</li>
+            <li>BE - NodeJS, Go</li>
+            <li>DB - SQL, PocketBase</li>
+            <li>SCSS, TypeScript</li>
+            <li>Docker, Nginx, SEO, AdSense</li>
+          </ul>
+        </ul>
+        <p>
+          Už 4 roky používam <b>Linux</b>
+          <i class="fa-brands fa-linux"></i> (ani za boha sa nevratím na temnú
+          stranu). <br />
+          Kvôli mojej obsesii s rýchlosťou používam <b>NeoVim</b> a viem písať
+          všetými 10 prstami cca 90 WPM. Milujem <b>Markdown</b> a <b>Latex</b>,
+          používam ich na svoje poznámky.
+        </p>
+
+        <!-- Github link -->
+
+        <div id="github-link-center">
+          <div id="github-link-container">
+            <a href="https://github.com/plundration">
+              <img src="assets/img/github-logo.png" id="github-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekty -->
+
+      <div id="projekty">
+        <h2>Galéria projektov</h2>
+
+        <div class="projects">
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">FLUF ESHOP</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">
+                    eshop s briketami pre študentskú firmu fluf
+                  </p>
                 </div>
-
-                <div id="footer-text">
-                    <a href="#intro" class="pixel hover-enlarge"> <i class="fa-solid fa-arrow-left-long"></i> BACK TO TOP </a>
-                </div>
+                <br />
+                <p>
+                  technológie: <br />
+                  <br />
+                  react + node.js + mariadb + stripe
+                </p>
+                <br />
+                <p>team: solo</p>
+              </div>
             </div>
-        </footer>
-    </body>
+            <a class="hover-enlarge">
+              <img class="project-img" src="assets/img/fluf.png" />
+            </a>
+          </div>
+
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">BOOK POINT</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">
+                    webstránka knižnice gymnázium poštová 9
+                  </p>
+                </div>
+                <br />
+                <p>
+                  technológie: <br />
+                  <br />
+                  react + node.js + mysql + nginx + docker
+                </p>
+                <br />
+                <p>team: ja + adam harmanský</p>
+                <br />
+                <p class="accent">ocenenie ksk</p>
+              </div>
+            </div>
+            <a class="hover-enlarge">
+              <img class="project-img" src="assets/img/bookpoint.png" />
+            </a>
+          </div>
+
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">ADVENT</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">
+                    súťaž advent programovania na gymnáziu poštová 9
+                  </p>
+                </div>
+                <br />
+                <p>
+                  programovacia súťaž vo forme adventného kalendára
+                  <br />
+                  ceny sponzorované školou
+                </p>
+                <br />
+                <p>team: ja + adam harmanský</p>
+              </div>
+            </div>
+            <a class="hover-enlarge">
+              <img class="project-img" src="assets/img/advent.png" />
+            </a>
+          </div>
+
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">PIXEL ENGINE</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">
+                    custom renderer na <b>3d pixel art</b>
+                  </p>
+                </div>
+                <br />
+                <p>
+                  tvorený pomocou Unity3D engine, nedokončený, plánujem sa k
+                  tomu vrátiť cez gap year
+                </p>
+              </div>
+            </div>
+            <a class="hover-enlarge" href="https://plundration.itch.io/horizon">
+              <video
+                class="project-img"
+                src="assets/img/pixel.mp4"
+                autoplay
+                loop
+              />
+            </a>
+          </div>
+
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">HORIZON</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">moja prvá 2d hra</p>
+                </div>
+                <br />
+                <p>tvorená pomocou godot engine a gdscript</p>
+              </div>
+            </div>
+            <a class="hover-enlarge" href="https://plundration.itch.io/horizon">
+              <img class="project-img" src="assets/img/horizon.webp" />
+            </a>
+          </div>
+
+          <div class="project">
+            <div class="project-text">
+              <div class="project-heading">ORBITS</div>
+              <div class="project-desc pixel uppercase">
+                <div>
+                  <p class="hover-enlarge larger">
+                    simulátor orbitálnych trajektórií
+                  </p>
+                </div>
+                <br />
+                <p>
+                  tvorený v raylibe s C++, scéna je serializovaná a
+                  deserializovaná s yaml
+                </p>
+              </div>
+            </div>
+            <a class="hover-enlarge">
+              <img class="project-img" src="assets/img/orbits.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="section-spacer"
+      style="--in: var(--clr-dark-sec); --out: var(--clr-dark)"
+    ></div>
+
+    <section>
+      <div id="sutaze">
+        <h2>Súťaže</h2>
+
+        <div id="sutaze-grid">
+          <div>
+            <div class="sutaze-container">
+              <!-- Chémia -->
+              <div class="sutaze-title">
+                <i class="fa-solid fa-flask-vial"></i>
+              </div>
+              <ul>
+                <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_CK_2023-24.pdf">8. miesto Celoštátne kolo kat. A 2023/24</a></li> -->
+                <li>
+                  Chemická olympiáda: 8. miesto Celoštátne kolo kat. A 2023/24
+                </li>
+                <li>
+                  Chemická olympiáda:
+                  <a href="/assets/diplomy/ChO_CK_2022-23.pdf"
+                    >Úspešný riešiteľ Celoštátneho kola kat. A 2022/23</a
+                  >
+                </li>
+                <!-- <li>Chemikláni Pardubice 2024: <a href="/assets/diplomy/ChO_CK_2022-23.pdf">1. miesto z Česko-Slovenska</a></li> -->
+                <li>Chemikláni Pardubice 2024: 1. miesto z Česko-Slovenska</li>
+                <!-- <li>Chemický náboj: <a href="/assets/diplomy/chemicky_naboj_2023-24.pdf">2. miesto Celoštátne kolo Seniori 2024</a></li> -->
+                <li>Chemický náboj: 2. miesto Celoštátne kolo Seniori 2024</li>
+                <li>
+                  Chemický náboj:
+                  <a href="/assets/diplomy/chemicky_naboj_2022-23.pdf"
+                    >3. miesto Celoštátne kolo Seniori 2023</a
+                  >
+                </li>
+                <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_KK_2020-21.pdf">3. miesto Krajské kolo Kat. A 2023/24</a></li> -->
+
+                <!-- <li>Chemická olympiáda: 3. miesto Krajské kolo Kat. A 2023/24</li> -->
+                <!-- <li>Chemická olympiáda: 4. miesto Krajské kolo Kat. B 2021/22</li> -->
+                <!-- <li>Chemická olympiáda: <a href="/assets/diplomy/ChO_KK_2020-21.pdf">5. miesto Krajské kolo Kat. C 2020/21</a></li> -->
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="sutaze-container">
+              <!-- Biológia -->
+              <div class="sutaze-title">
+                <i class="fa-solid fa-bacterium"></i>
+              </div>
+              <ul>
+                <!-- <li>Biologická olympiáda: <a href="/assets/diplomy/BiO_CK_2021-22.pdf">3. miesto Celoslovenské kolo Kat. A 2023/24</a></li> -->
+                <li>
+                  Biologická olympiáda: 3. miesto Celoslovenské kolo Kat. A
+                  2023/24
+                </li>
+                <li>
+                  Biologická olympiáda:
+                  <a href="/assets/diplomy/BiO_CK_2021-22.pdf"
+                    >2. miesto Celoslovenské kolo Kat. B 2021/22</a
+                  >
+                </li>
+                <li>
+                  Biologická olympiáda:
+                  <a href="/assets/diplomy/BiO_KK_2021-22.pdf"
+                    >2. miesto Krajské kolo Kat. B 2021/22</a
+                  >
+                </li>
+                <li>
+                  Biologická olympiáda:
+                  <a href="/assets/diplomy/BiO_OK_2019-20.pdf"
+                    >1. miesto Okresné kolo Kat. C 2019/20</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="sutaze-container">
+              <!-- Matematika -->
+              <div class="sutaze-title">
+                <i class="fa-solid fa-square-root-variable"></i>
+              </div>
+              <ul>
+                <li>
+                  Matematická olympiáda:
+                  <a href="/assets/diplomy/MO_KK_2021-22.pdf"
+                    >4. miesto Krajské kolo Kat. B 2021/22</a
+                  >
+                </li>
+                <li>
+                  Matematický náboj:
+                  <a href="/assets/diplomy/MatNaboj_2021-22.pdf"
+                    >3. miesto zo 151 Celoslovenské kolo</a
+                  >
+                </li>
+                <li>
+                  Junior matematický náboj: 1. miesto Kraj, 45. miesto
+                  Medzinárodne z 900 2019/20
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="sutaze-container">
+              <!-- Fyzika -->
+              <div class="sutaze-title"><i class="fa-solid fa-atom"></i></div>
+              <ul>
+                <li>
+                  Fyzikláni 2022:
+                  <a href="/assets/diplomy/Fyziklani_Praha_2021-22.pdf"
+                    >2. miesto Medzinárodné kolo v Prahe
+                  </a>
+                </li>
+                <li>
+                  Fyzikálny náboj:
+                  <a href="/assets/diplomy/fyzikalny_naboj_2022-23.pdf"
+                    >1. miesto Seniori kolo 2021/22
+                  </a>
+                </li>
+                <li>
+                  Fyzikláni Online:
+                  <a href="/assets/diplomy/Fyziklani_Online_2021-22.pdf"
+                    >12. miesto z 215 Medzinárodné kolo 2021/22
+                  </a>
+                </li>
+                <li>
+                  Fyzikálna olympiáda:
+                  <a href="/assets/diplomy/FO_KK_2021-22.pdf"
+                    >4. miesto Krajské kolo Kat. B 2021/22</a
+                  >
+                </li>
+                <li>
+                  Turnaj Mladých Fyzikov:
+                  <a href="/assets/diplomy/TMF_2020-21.pdf"
+                    >Úspešný riešiteľ Celoslovenské kolo 2020/21</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="sutaze-container">
+              <!-- Debatiáda -->
+              <div class="sutaze-title">Debatiáda</div>
+              <ul>
+                <li>2. miesto Celoslovenské kolo 2018/19</li>
+                <li>
+                  <a href="/assets/diplomy/SDA_KK_2017-18_1.pdf">1. miesto</a>
+                  1. Krajské kolo 2017/18
+                </li>
+                <li>
+                  <a href="/assets/diplomy/SDA_KK_2018-19_2.pdf">3. miesto</a>
+                  2. Krajské kolo 2018/19
+                </li>
+                <li>
+                  <a href="/assets/diplomy/SDA_KK_2017-18_2.pdf">4. miesto</a>
+                  2. Krajské kolo 2017/18
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="sutaze-container">
+              <!-- Programovanie -->
+              <div class="sutaze-title"><i class="fa-solid fa-code"></i></div>
+              <ul>
+                <li>
+                  PALMA junior:
+                  <a href="/assets/diplomy/Palma_CK_2020-21.pdf"
+                    >2. miesto Celoslovenské kolo Kat. GURU 2020/21
+                  </a>
+                </li>
+                <li>Účasť v HackKošice hackathon 2023</li>
+                <li>Účasť v Deutsche-Telekom hackathon 2022</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ostatne">
+        <h2>Ostatné</h2>
+        <p>
+          Mojim rodným jazykom je <b>slovenčina</b>, ale niekedy mám pocit , že
+          lepšie hovorím po <b>anglicky</b>. Okrem toho som sa 5 rokov učil
+          <b>nemčinu</b> a 4 roky <b>ruštinu</b>.
+        </p>
+        <p>
+          Venujem sa športu, najmä behu a cyklistike. Mám rád všednú hudbu, od
+          Debussyho po Kurta Cobaina. Hrajem na klavír a gitaru. Rád cestujem a
+          spoznávam nové kultúry.
+        </p>
+      </div>
+    </section>
+
+    <div
+      class="section-spacer"
+      style="--in: var(--clr-dark); --out: #050d1a"
+    ></div>
+
+    <footer class="full-page">
+      <div
+        class="full-page"
+        style="background-color: rgba(0, 10, 25, 0.8)"
+        id="footer-container"
+      >
+        <div class="pixel smaller" id="footer-text">
+          COPYRIGHT © 2023 PAVOL ALEXANDER KOMLOŠ
+        </div>
+
+        <div id="footer-contacts" class="monospace">
+          <span class="pixel">
+            PAVOL <br />
+            ALEXANDER <br />
+            KOMLOŠ
+          </span>
+
+          <img src="assets/img/plunder.svg" id="kontakty" />
+
+          <a class="hover-enlarge" href="https://github.com/plundration"
+            >GITHUB</a
+          >
+          <a class="hover-enlarge" href="mailto:pavol.a.komlos@gmail.com"
+            >EMAIL</a
+          >
+          <a class="hover-enlarge" href="https://plundration.github.io/"
+            >NOTES</a
+          >
+        </div>
+
+        <div id="footer-text">
+          <a href="#intro" class="pixel hover-enlarge">
+            <i class="fa-solid fa-arrow-left-long"></i> BACK TO TOP
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
