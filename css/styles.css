@@ -498,6 +498,8 @@ sutaze
 .sutaze-title {
   font-size: 2.4em;
   text-align: center;
+  color: var(--clr-accent);
+  font-wegiht: var(--fw-bold);
 }
 
 .sutaze-container ul {
